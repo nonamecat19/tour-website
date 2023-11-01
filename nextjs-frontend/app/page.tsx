@@ -3,6 +3,7 @@ import TourList from "@/components/TourList";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import FilterDrawer from "@/components/FilterDrawer";
+import AboutUs from "@/components/AboutUs";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       {/*<Footer/>*/}
       {/*<HeroSection/>*/}
       {/*<FilterDrawer/>*/}
+      {/*<AboutUs/>*/}
     </main>
   )
 }

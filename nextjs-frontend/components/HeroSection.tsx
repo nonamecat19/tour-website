@@ -16,11 +16,11 @@ function HeroSectionImage({index}: IHeroSectionImageProps) {
 }
 
 const imageList: string[] = [
-  "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80",
-  "https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80",
-  "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80",
-  "https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80",
-  "https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+  "https://i.pinimg.com/564x/f6/a9/27/f6a92744e5030509304d1f559f57c4ea.jpg",
+  "https://i.pinimg.com/564x/51/2e/82/512e829ca8ff59df5b6cdefea07044fb.jpg",
+  "https://i.pinimg.com/564x/8c/af/ec/8cafec2cde583f952caaac60210880c3.jpg",
+  "https://i.pinimg.com/564x/f5/23/9f/f5239f4aac044cd8beb45e6c9b9efa55.jpg",
+  "https://i.pinimg.com/564x/26/81/4b/26814b453429759c2860f3d7660a7550.jpg"
 ]
 
 export default function HeroSection() {
@@ -69,7 +69,7 @@ export default function HeroSection() {
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                   <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                    We’re changing the way people connect.
+                    Життя продовжується і потрібно подорожувати. Ми можемо надати таку можливість.
                   </h1>
                   <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
                     Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in quis cupidatat mollit aute velit. Et
@@ -81,10 +81,7 @@ export default function HeroSection() {
                       href="#"
                       className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
-                      Get started
-                    </a>
-                    <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                      Live demo <span aria-hidden="true">→</span>
+                      Вибрати план <span aria-hidden="true">→</span>
                     </a>
                   </div>
                 </div>

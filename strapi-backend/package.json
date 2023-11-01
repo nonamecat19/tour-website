@@ -1,5 +1,5 @@
 {
-  "name": "tour-website",
+  "name": "strapi-backend",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -20,7 +20,7 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "d72e06d0-d3a3-480a-a259-64109e0df9d6"
+    "uuid": "f49519d2-3aca-4806-8af0-667a0fcba504"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",

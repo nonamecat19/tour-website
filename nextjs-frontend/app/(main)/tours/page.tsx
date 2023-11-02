@@ -9,7 +9,6 @@ export default function Tours() {
   }
   return (
     <>
-      {JSON.stringify(data)}
       <TourList data={data}/>
     </>
   )

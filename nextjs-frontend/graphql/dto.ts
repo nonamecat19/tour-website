@@ -1,7 +1,19 @@
-export interface ICities {
+export type ICities = IDataList<{
+  name: string
+}>
+
+export type IPreview = IData<{
+  url: string
+}>
+
+export interface IData<T> {
   data: {
-    "attributes": {
-      "name": string
-    }
+    attributes: T
+  }
+}
+
+export interface IDataList<T> {
+  data: {
+    attributes: T
   }[]
 }

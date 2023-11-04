@@ -1,4 +1,4 @@
-import {gql} from "@apollo/client";
+import { gql } from '@apollo/client'
 
 export interface IGetCategoryList {
   categories: {
@@ -19,21 +19,21 @@ export interface IGetCategoryList {
 }
 
 export const categoryListQuery = gql`
-    query Categories {
-      categories {
-        data {
-          attributes {
-            name
-            preview {
-              data {
-                attributes {
-                  url
-                }
+  query Categories {
+    categories {
+      data {
+        attributes {
+          name
+          preview {
+            data {
+              attributes {
+                url
               }
             }
           }
-          id
         }
+        id
       }
     }
+  }
 `

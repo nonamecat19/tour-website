@@ -715,6 +715,7 @@ export interface ApiCityCity extends Schema.CollectionType {
     singularName: 'city';
     pluralName: 'cities';
     displayName: 'City';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -722,6 +723,7 @@ export interface ApiCityCity extends Schema.CollectionType {
   attributes: {
     name: Attribute.String & Attribute.Required & Attribute.Unique;
     tours: Attribute.Relation<'api::city.city', 'manyToMany', 'api::tour.tour'>;
+    preview: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

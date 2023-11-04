@@ -4,7 +4,8 @@
   "info": {
     "singularName": "city",
     "pluralName": "cities",
-    "displayName": "City"
+    "displayName": "City",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,6 +22,13 @@
       "relation": "manyToMany",
       "target": "api::tour.tour",
       "mappedBy": "cities"
+    },
+    "preview": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

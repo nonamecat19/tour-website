@@ -1,4 +1,4 @@
-export default function ToursId() {
+export default function CategoryIdPage() {
   return (
     <>
 

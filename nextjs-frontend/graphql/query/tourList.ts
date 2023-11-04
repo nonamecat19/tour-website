@@ -1,4 +1,4 @@
-import {gql, useSuspenseQuery} from "@apollo/client";
+import {gql} from "@apollo/client";
 import {ICities, IPreview} from "@/graphql/dto";
 
 export interface IGetTourList {
@@ -17,8 +17,7 @@ export interface IGetTourList {
   }
 }
 
-export function useGetTourList() {
-  return useSuspenseQuery<IGetTourList>(gql`
+export const tourListQuery = gql`
     query Tours {
         tours {
             data {
@@ -46,5 +45,7 @@ export function useGetTourList() {
             }
         }
     }
-  `)
-}
+`
+
+
+

@@ -1,9 +1,9 @@
 'use client'
 import TourList from "@/components/TourList";
-import {useGetTourList} from "@/graphql/query/tours";
 import IF from "@/utils/If";
+import {useGetTourList} from "@/graphql/query";
 
-export default function Tours() {
+export default function ToursPage() {
   const { data } = useGetTourList()
   return (
     <IF condition={data}>

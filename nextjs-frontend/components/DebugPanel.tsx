@@ -10,9 +10,7 @@ export default function DebugPanel() {
         <Link href='/categories'>Categories</Link>
         <Link href='/tour'>Tour example</Link>
         <Link href='/error'>Error page</Link>
-
       </div>
-
     </div>
   )
 }

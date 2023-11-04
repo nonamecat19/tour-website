@@ -1,9 +1,9 @@
 'use client'
 import IF from "@/utils/If";
-import {useGetCategoryList} from "@/graphql/query/category";
 import CategoryList from "@/components/CategoryList";
+import {useGetCategoryList} from "@/graphql/query";
 
-export default function Tours() {
+export default function CategoriesPage() {
   const { data } = useGetCategoryList()
   return (
     <IF condition={data}>

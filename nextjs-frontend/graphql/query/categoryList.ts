@@ -1,4 +1,4 @@
-import {gql, useSuspenseQuery} from "@apollo/client";
+import {gql} from "@apollo/client";
 
 export interface IGetCategoryList {
   categories: {
@@ -18,8 +18,7 @@ export interface IGetCategoryList {
   }
 }
 
-export function useGetCategoryList() {
-  return useSuspenseQuery<IGetCategoryList>(gql`
+export const categoryListQuery = gql`
     query Categories {
       categories {
         data {
@@ -37,5 +36,4 @@ export function useGetCategoryList() {
         }
       }
     }
-  `)
-}
+`

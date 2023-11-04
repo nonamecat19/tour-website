@@ -1,6 +1,6 @@
-import BaseHeader from "@/components/BaseHeader";
 import {ReactNode} from "react";
 import Footer from "@/components/Footer";
+import MainHeader from "@/components/MainHeader";
 
 interface IProps {
   children: ReactNode
@@ -9,7 +9,7 @@ interface IProps {
 export default function MainLayout({children}: IProps) {
   return (
     <>
-      <BaseHeader/>
+      <MainHeader/>
       <main className="min-h-[400px]">
         {children}
       </main>

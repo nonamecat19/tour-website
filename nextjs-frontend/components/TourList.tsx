@@ -13,6 +13,7 @@ export default function TourList({data}: IProps) {
       {data.tours.data.map(({id, attributes}) => (
         <Card
           id={id}
+          url={`/tours/${id}`}
           img={API_URL + attributes.preview.data.attributes.url}
           title={attributes.name}
           description={attributes.cities.data.map((el) => el.attributes.name).join(' - ')}

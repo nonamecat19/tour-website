@@ -1,7 +1,7 @@
 'use client'
-import { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
+import {Fragment, useState} from 'react'
+import {Dialog, Transition} from '@headlessui/react'
+import {XMarkIcon} from '@heroicons/react/24/outline'
 
 export default function FilterDrawer() {
   const [open, setOpen] = useState(true)
@@ -9,7 +9,7 @@ export default function FilterDrawer() {
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={setOpen}>
-        <div className="fixed inset-0" />
+        <div className="fixed inset-0"/>
 
         <div className="fixed inset-0 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
@@ -28,9 +28,10 @@ export default function FilterDrawer() {
                     <div className="flex min-h-0 flex-1 flex-col overflow-y-scroll py-6">
                       <div className="px-4 sm:px-6">
                         <div className="flex items-start justify-between">
-                          <Dialog.Title className="text-base font-semibold leading-6 text-gray-900">
-                            Panel title
-                          </Dialog.Title>
+                          <Dialog.Title
+                            className="text-base font-semibold leading-6 text-gray-900"
+                            children="Panel title"
+                          />
                           <div className="ml-3 flex h-7 items-center">
                             <button
                               type="button"
@@ -38,7 +39,7 @@ export default function FilterDrawer() {
                               onClick={() => setOpen(false)}
                             >
                               <span className="sr-only">Close panel</span>
-                              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                              <XMarkIcon className="h-6 w-6" aria-hidden="true"/>
                             </button>
                           </div>
                         </div>
@@ -50,15 +51,13 @@ export default function FilterDrawer() {
                         type="button"
                         className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:ring-gray-400"
                         onClick={() => setOpen(false)}
-                      >
-                        Cancel
-                      </button>
+                        children="Cancel"
+                      />
                       <button
                         type="submit"
                         className="ml-4 inline-flex justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-                      >
-                        Save
-                      </button>
+                        children="Save"
+                      />
                     </div>
                   </div>
                 </Dialog.Panel>

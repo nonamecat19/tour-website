@@ -97,9 +97,8 @@ export default function BaseHeader({products, callsToAction, company}: IProps) {
                       key={item.name}
                       href={item.href}
                       className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                    >
-                      {item.name}
-                    </a>
+                      children={item.name}
+                    />
                   ))}
                 </div>
               </Popover.Panel>

@@ -1,4 +1,4 @@
-import {gql} from '@apollo/client'
+import { gql } from '@apollo/client'
 
 export interface IGetCityList {
   cities: {
@@ -19,21 +19,21 @@ export interface IGetCityList {
 }
 
 export const cityListQuery = gql`
-query Cities {
+  query Cities {
     cities {
-        data {
-            attributes {
-                name
-                preview {
-                    data {
-                        attributes {
-                            url
-                        }
-                    }
-                }
+      data {
+        attributes {
+          name
+          preview {
+            data {
+              attributes {
+                url
+              }
             }
-            id
+          }
         }
+        id
+      }
     }
-}
+  }
 `

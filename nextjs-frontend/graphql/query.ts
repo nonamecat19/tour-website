@@ -4,8 +4,8 @@ import {
   categoryListQuery,
   IGetCategoryList,
 } from '@/graphql/query/categoryList'
-import {cityListQuery, IGetCityList} from "@/graphql/query/cityList";
-import {cityQuery, IGetCity} from "@/graphql/query/city";
+import { cityListQuery, IGetCityList } from '@/graphql/query/cityList'
+import { cityQuery, IGetCity } from '@/graphql/query/city'
 
 export function useGetTourList() {
   return useSuspenseQuery<IGetTourList>(tourListQuery)

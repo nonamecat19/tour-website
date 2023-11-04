@@ -1,7 +1,7 @@
 import { API_URL } from '@/config/base'
 import ListContainer from '@/components/ListContainer'
 import Card from '@/components/Card'
-import {IGetCategoryList} from "@/graphql/query/categoryList";
+import { IGetCategoryList } from '@/graphql/query/categoryList'
 
 interface IProps {
   data: IGetCategoryList

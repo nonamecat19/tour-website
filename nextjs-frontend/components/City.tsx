@@ -1,7 +1,7 @@
 import { API_URL } from '@/config/base'
 import ListContainer from '@/components/ListContainer'
 import Card from '@/components/Card'
-import {IGetCity} from "@/graphql/query/city";
+import { IGetCity } from '@/graphql/query/city'
 
 interface IProps {
   data: IGetCity

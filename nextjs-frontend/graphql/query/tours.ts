@@ -48,6 +48,3 @@ export function useGetTourList() {
     }
   `)
 }
-
-
-

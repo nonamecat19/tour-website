@@ -1,7 +1,7 @@
 import { API_URL } from '@/config/base'
 import ListContainer from '@/components/ListContainer'
 import Card from '@/components/Card'
-import { BaseTours } from "@/graphql/dto";
+import { BaseTours } from '@/graphql/dto'
 
 interface IProps {
   data: BaseTours

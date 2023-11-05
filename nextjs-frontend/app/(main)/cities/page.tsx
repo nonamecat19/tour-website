@@ -1,17 +1,14 @@
-'use client'
-import { useGetCitiesList } from '@/graphql/query'
 import IF from '@/utils/If'
 import CityList from '@/components/CityList'
-import BaseHeading from "@/components/BaseHeading";
+import BaseHeading from '@/components/BaseHeading'
+import { useGetCityList } from '@/graphql/query'
 
-export default function CitiesPage() {
-  const { data } = useGetCitiesList()
+export default async function CitiesPage() {
+  const data = await useGetCityList()
+
   return (
     <>
-      <BaseHeading
-        title="Міста"
-        description="Список міст"
-      />
+      <BaseHeading title='Міста' description='Список міст' />
       <IF condition={data}>
         <CityList data={data} />
       </IF>

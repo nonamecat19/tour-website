@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client'
-import { BaseTours } from "@/graphql/dto";
+import { BaseTours } from '@/graphql/dto'
 
 export interface IGetCity {
   city: {

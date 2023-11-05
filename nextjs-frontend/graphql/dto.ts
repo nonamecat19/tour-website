@@ -1,5 +1,3 @@
-
-
 export interface BaseTours {
   data: {
     id: string

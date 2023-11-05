@@ -14,7 +14,7 @@ export default function CategoryList({ data }: IProps) {
         <Card
           key={id}
           id={id}
-          url={`/tours/${id}`}
+          url={`/categories/${id}`}
           img={API_URL + attributes.preview.data.attributes.url}
           title={attributes.name}
         />

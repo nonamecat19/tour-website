@@ -691,6 +691,11 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   attributes: {
     name: Attribute.String & Attribute.Required & Attribute.Unique;
     preview: Attribute.Media;
+    tours: Attribute.Relation<
+      'api::category.category',
+      'oneToMany',
+      'api::tour.tour'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -756,9 +761,9 @@ export interface ApiTourTour extends Schema.CollectionType {
       'api::city.city'
     >;
     preview: Attribute.Media;
-    categories: Attribute.Relation<
+    category: Attribute.Relation<
       'api::tour.tour',
-      'oneToMany',
+      'manyToOne',
       'api::category.category'
     >;
     createdAt: Attribute.DateTime;

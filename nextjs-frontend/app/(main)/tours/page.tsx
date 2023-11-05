@@ -2,12 +2,19 @@
 import TourList from '@/components/TourList'
 import IF from '@/utils/If'
 import { useGetTourList } from '@/graphql/query'
+import BaseHeading from "@/components/BaseHeading";
 
 export default function ToursPage() {
   const { data } = useGetTourList()
   return (
-    <IF condition={data}>
-      <TourList data={data} />
-    </IF>
+    <>
+      <BaseHeading
+        title="Тури"
+        description="Список турів по Україні"
+      />
+      <IF condition={data}>
+        <TourList data={data.tours} />
+      </IF>
+    </>
   )
 }

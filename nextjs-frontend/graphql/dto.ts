@@ -1,19 +1,26 @@
-export type ICities = IDataList<{
-  name: string
-}>
 
-export type IPreview = IData<{
-  url: string
-}>
 
-export interface IData<T> {
+export interface BaseTours {
   data: {
-    attributes: T
-  }
-}
-
-export interface IDataList<T> {
-  data: {
-    attributes: T
+    id: string
+    attributes: {
+      name: string
+      price: number
+      numberOfPeople: number
+      cities: {
+        data: {
+          attributes: {
+            name: string
+          }
+        }[]
+      }
+      preview: {
+        data: {
+          attributes: {
+            url: string
+          }
+        }
+      }
+    }
   }[]
 }

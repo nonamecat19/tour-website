@@ -1,38 +1,14 @@
 import { gql } from '@apollo/client'
+import { BaseTours } from "@/graphql/dto";
 
 export interface IGetCity {
   city: {
     data: {
       attributes: {
-        tours: {
-          data: Array<{
-            id: string
-            attributes: {
-              name: string
-              price: number
-              numberOfPeople: number
-              cities: {
-                data: Array<{
-                  id: string
-                  attributes: {
-                    name: string
-                  }
-                }>
-              }
-              preview: {
-                data: {
-                  attributes: {
-                    url: string
-                  }
-                }
-              }
-            }
-          }>
-        }
+        tours: BaseTours
         name: string
         preview: {
           data: {
-            id: string
             attributes: {
               url: string
             }
@@ -57,7 +33,6 @@ query City {
                             numberOfPeople
                             cities {
                                 data {
-                                    id
                                     attributes {
                                         name
                                     }

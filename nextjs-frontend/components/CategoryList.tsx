@@ -12,6 +12,7 @@ export default function CategoryList({ data }: IProps) {
     <ListContainer>
       {data.categories.data.map(({ id, attributes }) => (
         <Card
+          key={id}
           id={id}
           url={`/tours/${id}`}
           img={API_URL + attributes.preview.data.attributes.url}

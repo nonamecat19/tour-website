@@ -1,17 +1,18 @@
 import { API_URL } from '@/config/base'
 import ListContainer from '@/components/ListContainer'
 import Card from '@/components/Card'
-import { IGetTourList } from '@/graphql/query/tourList'
+import { BaseTours } from "@/graphql/dto";
 
 interface IProps {
-  data: IGetTourList
+  data: BaseTours
 }
 
 export default function TourList({ data }: IProps) {
   return (
     <ListContainer>
-      {data.tours.data.map(({ id, attributes }) => (
+      {data.data.map(({ id, attributes }) => (
         <Card
+          key={id}
           id={id}
           url={`/tours/${id}`}
           img={API_URL + attributes.preview.data.attributes.url}

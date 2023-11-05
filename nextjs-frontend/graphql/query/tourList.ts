@@ -1,20 +1,8 @@
 import { gql } from '@apollo/client'
-import { ICities, IPreview } from '@/graphql/dto'
+import { BaseTours } from "@/graphql/dto";
 
 export interface IGetTourList {
-  tours: {
-    data: {
-      id: string
-      attributes: {
-        name: string
-        price: number
-        numberOfPeople: number
-        createdAt: Date
-        cities: ICities
-        preview: IPreview
-      }
-    }[]
-  }
+  tours: BaseTours
 }
 
 export const tourListQuery = gql`
@@ -26,7 +14,6 @@ export const tourListQuery = gql`
           name
           price
           numberOfPeople
-          createdAt
           cities {
             data {
               attributes {

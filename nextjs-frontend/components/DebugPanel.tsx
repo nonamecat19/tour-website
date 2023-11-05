@@ -7,9 +7,11 @@ export default function DebugPanel() {
         <Link href={'/'}>Main</Link>
         <Link href={'/about'}>About</Link>
         <Link href={'/tours'}>Tours</Link>
+        <Link href={'/tours/1'}>Tour example</Link>
         <Link href={'/categories'}>Categories</Link>
+        <Link href={'/categories/1'}>Categories example</Link>
         <Link href={'/cities'}>Cities</Link>
-        <Link href={'/tour'}>Tour example</Link>
+        <Link href={'/cities/1'}>Cities examples</Link>
         <Link href={'/error'}>Error page</Link>
       </div>
     </div>

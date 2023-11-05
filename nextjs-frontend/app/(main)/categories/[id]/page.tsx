@@ -1,6 +1,5 @@
 import { useGetCategory } from '@/graphql/query'
 import BaseHeading from '@/components/BaseHeading'
-import IF from '@/utils/If'
 import TourList from '@/components/TourList'
 
 interface IProps {
@@ -18,9 +17,7 @@ export default async function CategoryIdPage({ params }: IProps) {
         image={preview.data.attributes.url}
       />
 
-      <IF condition={data}>
-        <TourList data={tours} />
-      </IF>
+      <TourList data={tours} />
     </>
   )
 }

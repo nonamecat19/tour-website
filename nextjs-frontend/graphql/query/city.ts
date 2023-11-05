@@ -1,5 +1,5 @@
-import { gql } from '@apollo/client'
 import { BaseTours } from '@/graphql/dto'
+import gql from 'graphql-tag'
 
 export interface IGetCity {
   city: {
@@ -19,46 +19,46 @@ export interface IGetCity {
   }
 }
 
-export const cityQuery = (id: string) => gql`
-query City {
-    city(id: ${id}) {
-        data {
-            attributes {
-                tours {
-                    data {
-                        id
-                        attributes {
-                            name
-                            price
-                            numberOfPeople
-                            cities {
-                                data {
-                                    attributes {
-                                        name
-                                    }
-                                }
-                            }
-                            preview {
-                                data {
-                                    attributes {
-                                        url
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+export const cityQuery = gql`
+  query City($id: ID!) {
+    city(id: $id) {
+      data {
+        attributes {
+          tours {
+            data {
+              id
+              attributes {
                 name
-                preview {
-                    data {
-                        id
-                        attributes {
-                            url
-                        }
+                price
+                numberOfPeople
+                cities {
+                  data {
+                    attributes {
+                      name
                     }
+                  }
                 }
+                preview {
+                  data {
+                    attributes {
+                      url
+                    }
+                  }
+                }
+              }
             }
+          }
+          name
+          preview {
+            data {
+              id
+              attributes {
+                url
+              }
+            }
+          }
         }
+      }
     }
-}
+  }
 `

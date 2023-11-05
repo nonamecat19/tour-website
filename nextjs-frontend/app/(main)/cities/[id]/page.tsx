@@ -1,13 +1,14 @@
-import IF from '@/utils/If'
 import { useGetCity } from '@/graphql/query'
-import { useParams } from 'next/navigation'
 import TourList from '@/components/TourList'
 import BaseHeading from '@/components/BaseHeading'
 
-export default async function CityPage() {
-  const params = useParams()
-  const data = await useGetCity(params.id as string)
-  const { name, preview, tours } = data.city.data.attributes
+interface IProps {
+  params: { id: string }
+}
+
+export default async function CityPage({ params }: IProps) {
+  const data = await useGetCity(params.id);
+  const { name, preview, tours } = data.city.data.attributes;
   return (
     <>
       <BaseHeading
@@ -16,9 +17,7 @@ export default async function CityPage() {
         image={preview.data.attributes.url}
       />
 
-      <IF condition={data}>
-        <TourList data={tours} />
-      </IF>
+      <TourList data={tours} />
     </>
   )
 }

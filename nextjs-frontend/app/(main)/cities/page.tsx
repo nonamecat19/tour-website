@@ -1,4 +1,3 @@
-import IF from '@/utils/If'
 import CityList from '@/components/CityList'
 import BaseHeading from '@/components/BaseHeading'
 import { useGetCityList } from '@/graphql/query'
@@ -9,9 +8,7 @@ export default async function CitiesPage() {
   return (
     <>
       <BaseHeading title='Міста' description='Список міст' />
-      <IF condition={data}>
-        <CityList data={data} />
-      </IF>
+      <CityList data={data} />
     </>
   )
 }

@@ -20,46 +20,46 @@ export interface IGetCategory {
   }
 }
 
-export const categoryQuery = (id: string) => gql`
-query Category {
-    category(id: ${id}) {
-        data {
-            id
-            attributes {
-                name
-                preview {
-                    data {
-                        attributes {
-                            url
-                        }
-                    }
-                }
-                tours {
-                    data {
-                        id
-                        attributes {
-                            name
-                            price
-                            numberOfPeople
-                            cities {
-                                data {
-                                    attributes {
-                                        name
-                                    }
-                                }
-                            }
-                            preview {
-                                data {
-                                    attributes {
-                                        url
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+export const categoryQuery = gql`
+  query Category($id: ID!) {
+    category(id: $id) {
+      data {
+        id
+        attributes {
+          name
+          preview {
+            data {
+              attributes {
+                url
+              }
             }
+          }
+          tours {
+            data {
+              id
+              attributes {
+                name
+                price
+                numberOfPeople
+                cities {
+                  data {
+                    attributes {
+                      name
+                    }
+                  }
+                }
+                preview {
+                  data {
+                    attributes {
+                      url
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
+      }
     }
-}
+  }
 `
